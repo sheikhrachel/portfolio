@@ -1,0 +1,20 @@
+<!-- templates/partials/footer.html -->
+<footer class="footer">
+    <div class="footer__copyright">
+        <div class="top">
+            <span>Designed &amp; Developed by</span>
+        </div>
+        <div class="bottom">
+            <span>Rachel Sheikh 2017-{{.CurrentYear}}</span>
+            <span>Built with Go and HTMX</span>
+        </div>
+    </div>
+    <div class="footer__links">
+        {{range .SocialLinks}}
+        <a href="{{.URL}}" target="_blank" title="{{.Name}}">
+            <span class="text">{{.Name}}</span>
+            <img src="{{.Icon}}" alt="{{.Name}}">
+        </a>
+        {{end}}
+    </div>
+</footer>
